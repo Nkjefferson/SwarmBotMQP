@@ -6,8 +6,8 @@ socket.on('data', d => {
 });
 
 var n = 40,
-temp_data = d3.range(n).map(() => { return 0 });
-    humid_data = d3.range(n).map(() => { return 0 }); // Init data with zeroes
+temp_data = d3.range(n).map(() => { return 0 }),
+humid_data = d3.range(n).map(() => { return 0 }); // Init data with zeroes
 
     var h_svg = d3.select("#humidity"),
     t_svg = d3.select("#temperature"),
@@ -55,7 +55,7 @@ temp_data = d3.range(n).map(() => { return 0 });
     t_g.append("g")
     .attr("clip-path", "url(#clip)")
     .append("path")
-    .datum(humid_data)
+    .datum(temp_data)
     .attr("class", "line")
     .transition()
     .duration(10000)
@@ -82,7 +82,7 @@ temp_data = d3.range(n).map(() => { return 0 });
     h_g.append("g")
     .attr("clip-path", "url(#clip)")
     .append("path")
-    .datum(temp_data)
+    .datum(humid_data)
     .attr("class", "line")
     .transition()
     .duration(10000)

@@ -10,7 +10,7 @@ io.on('connection', socket => {
 	socket.emit('connected', generateDataSet(sensorCount));
 });
 
-var interval = 5000; // Fire off every 5 seconds, give or take
+const interval = 5000; // Fire off every 5 seconds, give or take
 setInterval(() => {
 	var dataSet = generateDataSet(sensorCount);
 	io.sockets.emit('data', dataSet);
