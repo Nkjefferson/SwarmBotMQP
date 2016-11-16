@@ -6,8 +6,9 @@ var io = require('socket.io')(server);
 
 const sensorCount = 3;
 
-io.on('connection', socket => {
-	socket.emit('connected', generateDataSet(sensorCount));
+io.on('connection', function(){ 
+
+	return socket >= {socket.emit('connected', generateDataSet(sensorCount));}
 });
 
 const interval = 5000; // Fire off every 5 seconds, give or take
