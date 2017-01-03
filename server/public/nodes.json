@@ -1,0 +1,107 @@
+{
+  "0": {
+    "name": 0,
+    "children": [
+      {
+        "name": "December",
+        "children": [
+          {
+            "name": "12",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "9:09:48 PM: 81%"
+                  },
+                  {
+                    "name": "9:09:53 PM: 72%"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61%"
+                  },
+                  {
+                    "name": "9:10:03 PM: 16%"
+                  },
+                  {
+                    "name": "9:10:08 PM: 74%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "9:09:49 PM: 82°F"
+                  },
+                  {
+                    "name": "9:09:53 PM: 83°F"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61°F"
+                  },
+                  {
+                    "name": "9:10:03 PM: 42°F"
+                  },
+                  {
+                    "name": "9:10:08 PM: 81°F"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "January",
+        "children": [
+          {
+            "name": "2",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "9:09:48 PM: 81%"
+                  },
+                  {
+                    "name": "9:09:53 PM: 72%"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61%"
+                  },
+                  {
+                    "name": "9:10:03 PM: 16%"
+                  },
+                  {
+                    "name": "9:10:08 PM: 74%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "9:09:49 PM: 82°F"
+                  },
+                  {
+                    "name": "9:09:53 PM: 83°F"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61°F"
+                  },
+                  {
+                    "name": "9:10:03 PM: 42°F"
+                  },
+                  {
+                    "name": "9:10:08 PM: 81°F"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

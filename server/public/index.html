@@ -1,20 +1,145 @@
 <!DOCTYPE html>
+<html>
 <meta charset="utf-8">
-<style type="text/css" rel="stylesheet" href="css/style.css"></style>
 
-<style >
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="//d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/tabs.js"></script>
+</head>
 
-.line {
-  fill: none;
-  stroke: red;
-  stroke-width: 1.5px;
+
+<body>
+<div class="container-fluid">
+</div>
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+				<div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+					<div class="list-group">
+						<a href="#" class="list-group-item active text-center">
+							<h4 class="glyphicon glyphicon-home"></h4><br/>Home
+						</a>
+						<a href="#" class="list-group-item text-center">
+							<h4 class="glyphicon glyphicon-screenshot"></h4><br/>Node<br/>
+							<select id='nodes' class='selectpicker'>
+								
+							</select>
+						</a>
+						<a href="#" class="list-group-item text-center">
+							<h4 class="glyphicon glyphicon-remove-sign"></h4><br/>Network
+						</a>
+						<a href="#" class="list-group-item text-center">
+							<h4 class="glyphicon glyphicon-map-marker"></h4><br/>Maps
+						</a>
+						<a href="#" class="list-group-item text-center">
+							<h4 class="glyphicon glyphicon-phone"></h4><br/>About
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+					<!-- flight section -->
+					<div class="bhoechie-tab-content active">
+					<div style="opacity:1.0;">
+						<center>
+							<h1 class="glyphicon glyphicon-home" style="font-size:14em;color:#55518a"></h1>
+							<h2 style="margin-top: 0;color:#55518a">Home</h2>
+							
+							
+							
+							<div class="container">
+								<div class="col-lg-6 col-md-6 col-sm-9 col-xs-9">
+									<h3 style="margin-top: 0;color:#55518a">Humidity</h3>
+									<svg id="humidity" width="480" height="250"></svg>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-9 col-xs-9">
+									<h3 style="margin-top: 0;color:#55518a">Temprature</h3>
+									<svg id="temperature" width="480" height="250"></svg>
+								</div>
+							</div>
+							<!-- <svg id="humidity" width="240" height="125"></svg> -->
+
+							<script src="js/script.js"></script>
+						</center>
+						</div>
+					</div>
+					<!-- train section -->
+					<div class="bhoechie-tab-content">
+						<center >
+							<div class="container">
+								<h2 id="nodeSel" style="margin-top: 0;color:#55518a">Node</h2>
+								<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="tree.html" marginwidth="0" marginheight="0" style="height: 800px;width:1000px;" scrolling="no"></iframe>
+							</div>
+						</center>
+					</div>
+
+					<!-- hotel search -->
+					<div class="bhoechie-tab-content">
+						<center>
+							<h1 class="glyphicon glyphicon-plane" style="font-size:12em;color:#55518a"></h1>
+							<h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+							<h3 style="margin-top: 0;color:#55518a">Hotel Directory</h3>
+						</center>
+					</div>
+					<div class="bhoechie-tab-content">
+						<center>
+							<h1 class="glyphicon glyphicon-cutlery" style="font-size:12em;color:#55518a"></h1>
+							<h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+							<h3 style="margin-top: 0;color:#55518a">Restaurant Diirectory</h3>
+						</center>
+					</div>
+					<div class="bhoechie-tab-content">
+						<center>
+							<h1 class="glyphicon glyphicon-credit-card" style="font-size:12em;color:#55518a"></h1>
+							<h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+							<h3 style="margin-top: 0;color:#55518a">Credit Card</h3>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+// build a list of classes from an array
+document.getElementById('nodes').addEventListener(
+	'click',
+	function(){
+	//	document.getElementById('nodeSel').innerText = "Node " + document.getElementById('nodes').value;
+	});
+$("#nodes").on('change', function() {
+    
+    document.getElementById('nodeSel').innerText = "Node " + document.getElementById('nodes').value;
+});
+buildList(getMyList());
+
+function buildList( lit ) { // aka list
+  var list = document.getElementById('nodes')
+  // for each class in 'lit', add a paragraph tag + class name
+  lit.forEach(function(cl) {
+    list.innerHTML += "<option>" + cl + "</option>";
+  })
+  document.getElementById('nodeSel').innerText = "Node " + document.getElementById('nodes').value;
 }
 
-</style>
-<h1>Humidity		Temerature</h1>
-<svg id="humidity" width="480" height="250"></svg>
-<svg id="temperature" width="480" height="250"></svg>
-<!-- <svg id="humidity" width="240" height="125"></svg> -->
-<script src="//d3js.org/d3.v4.min.js"></script>
-<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-<script src="js/script.js"></script>
+function getMyList() {
+  function reqListener () {
+    var tmplist = this.responseText.split(',');
+    console.log( tmplist )
+    buildList( tmplist )
+  }
+  
+  var oReq = new XMLHttpRequest();
+  
+  // defining behavior for when the response comes back to us
+  oReq.addEventListener("load", reqListener);
+  oReq.open("GET", "/nodes");
+  oReq.send();
+}
+</script>
+</html>

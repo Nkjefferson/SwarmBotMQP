@@ -116,3 +116,5 @@ humid_data = d3.range(n).map(() => { return 0 }); // Init data with zeroes
   temp_data.shift();
 
 }
+
+

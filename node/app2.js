@@ -7,7 +7,7 @@ var headers = {
 }
 
 var requestData = {
-	id: 0,
+	id: 1,
 	humidity: 50,
 	temp: 75
 };
