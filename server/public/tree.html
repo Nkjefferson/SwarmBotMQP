@@ -30,10 +30,21 @@
 
 var treeData = undefined;
 
+function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 var request = new XMLHttpRequest();
-request.open('GET', '/nodeTree', false);  // `false` makes the request synchronous
-request.send(null);
+request.open('GET', '/nodeTree?id=' + getParameterByName('id'), false);  // `false` makes the request synchronous
+request.send();
 
 if (request.status === 200) {
   console.log(request.responseText);

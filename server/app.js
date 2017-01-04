@@ -5,6 +5,8 @@ var server = require('http').Server(app);
 var port  = process.env.PORT || 8080;
 var io = require('socket.io')(server);
 var fs = require('fs');
+var qs = require('querystring');
+var url = require('url');
 
 var dataSet = [];
 var dataBank = [];
@@ -115,36 +117,32 @@ app.post('/handle',function(req, res){
 	data["id"] = req.body.id;
 	data["temperature"] = req.body.temp;
 	data["humidity"] = req.body.humidity;
-	//console.log(data["id"] + " Posted Data " + data["humidity"] + " Humidity");
 	dataSet.push(data);
 	dataBank.push(data);
 	addData(data["id"],data["humidity"],0);
 	addData(data["id"],data["temperature"],1);
-
-	//console.log(data["id"]);
-	//console.log(file["1"]);
-	//file[data["id"]]= dat;
-
-
-
 	
 	res.sendStatus(200);
 });
 
 app.get('/nodes',function(req,res){
 	var list = [];
-	for(var i = 0; i < dataBank.length; i++){
-		if(list.indexOf(dataBank[i].id) < 0	){
-			list.push(dataBank[i].id);
-		}
+	for(var key in file){
+		list.push(key);
 	}
+	// for(var i = 0; i < dataBank.length; i++){
+	// 	if(list.indexOf(dataBank[i].id) < 0	){
+	// 		list.push(dataBank[i].id);
+	// 	}
+	// }
 	res.end(list.toString());
 });
 app.get('/nodeTree',function(req,res){
 	var list = [];
-	console.log(JSON.stringify(file["0"]));
-	res.end(JSON.stringify(file[0]));
-	console.log("sent");
+	var post = qs.parse(url.parse(req.url).query)
+	res.end(JSON.stringify(file[post.id]));
+	
+	
 });
 //Serve the static front end
 app.use(express.static('public'));

@@ -73,7 +73,7 @@
 						<center >
 							<div class="container">
 								<h2 id="nodeSel" style="margin-top: 0;color:#55518a">Node</h2>
-								<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="tree.html" marginwidth="0" marginheight="0" style="height: 800px;width:1000px;" scrolling="no"></iframe>
+								<iframe id="tree" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="tree.html" marginwidth="0" marginheight="0" style="height: 800px;width:1000px;" scrolling="no"></iframe>
 							</div>
 						</center>
 					</div>
@@ -107,14 +107,10 @@
 </body>
 <script>
 // build a list of classes from an array
-document.getElementById('nodes').addEventListener(
-	'click',
-	function(){
-	//	document.getElementById('nodeSel').innerText = "Node " + document.getElementById('nodes').value;
-	});
 $("#nodes").on('change', function() {
     
     document.getElementById('nodeSel').innerText = "Node " + document.getElementById('nodes').value;
+    $("#tree").attr('src',"tree.html?id="+$("#nodes").val());
 });
 buildList(getMyList());
 
@@ -125,6 +121,7 @@ function buildList( lit ) { // aka list
     list.innerHTML += "<option>" + cl + "</option>";
   })
   document.getElementById('nodeSel').innerText = "Node " + document.getElementById('nodes').value;
+  $("#tree").attr('src',"tree.html?id="+$("#nodes").val());
 }
 
 function getMyList() {
