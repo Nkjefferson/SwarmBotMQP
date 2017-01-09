@@ -25,7 +25,8 @@ var options = {
 
 //Start the request
 const interval = 5000;
-setInterval(function() {
+
+var sendData = function() {
 	//generate mock data
 	requestData.humidity = Math.round(Math.random()*100);
 	requestData.temp = Math.round((Math.random()*51) + 40);
@@ -38,4 +39,6 @@ setInterval(function() {
 			console.log(response.statusCode)
 		}
 	})
-}, interval);
+};
+
+sendData();

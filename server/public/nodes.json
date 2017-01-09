@@ -144,6 +144,48 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "4",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "12:36:56 PM: 24%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "12:36:56 PM: 43°F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "9",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "5:29:29 PM: 21%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "5:29:29 PM: 79°F"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -177,6 +219,33 @@
                   },
                   {
                     "name": "5:58:35 PM: 45°F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "4",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "12:42:00 PM: 71%"
+                  },
+                  {
+                    "name": "12:42:05 PM: 99%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "12:42:00 PM: 56°F"
+                  },
+                  {
+                    "name": "12:42:05 PM: 41°F"
                   }
                 ]
               }
