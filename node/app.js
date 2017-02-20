@@ -14,9 +14,9 @@ var requestData = {
 
 //configure the request
 var options = {
-	//url: 'http://swarm.dyn.wpi.edu:8080/handle',
+	url: 'http://swarm.dyn.wpi.edu:8080/handle',
 
-  url: 'http://localhost:8080/handle',
+  //url: 'http://localhost:8080/handle',
 	method: 'POST',
 	headers: headers,
 	json: true,
