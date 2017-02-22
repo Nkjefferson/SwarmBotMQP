@@ -1,4 +1,8 @@
 // Part of the code below is based on the Adafruit SI1145 library (https://github.com/adafruit/Adafruit_SI1145_Library)
+// This is a small library for getting data from sensors on the BBB
+// Declare this file as an object and create an instance from it.
+// Invoke the getData() function from the instance, which will take in a callback function and return a data packet in JSON format.
+// Nam Tran
 var b = require('bonescript');
 var async = require('async');
 var i2c = require('i2c-bus'),
@@ -163,68 +167,9 @@ function readProx() {
   return buffer[0];;
 }
 
-// (function () {
-//   console.log("Sensors test");
-
-//   if(!begin()) {
-//     console.log("Didn't find SI1145");
-//     return;
-//   }
-
-//   setInterval(function() {
-//     async.series([
-//       function (cb) {
-//         b.analogRead('P9_39', function(rawData){
-//           cb(null, rawData.value);
-//         })
-//       },
-//       function (cb) {
-//         cb(null, readUV()/100.0);
-//       },
-//       function (cb) {
-//         cb(null, readIR());
-//       },
-//       function (cb) {
-//         cb(null, readVis());
-//       },
-//       function (cb) {
-//         cb(null, readProx());
-//       },
-//       function (cb) {
-//         i2c1 = i2c.open(1, cb);
-//       },
-//       function (cb) {
-//         i2c1.writeByte(SHT31_ADDR, 0x2C, 0x06, cb);
-//       },
-//       function (cb) {
-//         i2c1.readI2cBlock(SHT31_ADDR, 0x00, 6, new Buffer(6), function(err, bytesRead, buffer) {
-//           if (err) throw err;
-//            var temp = buffer[0] * 256 + buffer[1];
-//            var tempDataC = -45 + (175 * temp / 65535.0); // in Celsius
-//            var tempDataF = -49 + (315 * temp / 65535.0); // in Fareinheit
-//            var humidData = 100 * (buffer[3] * 256 + buffer[4]) / 65535.0
-//            cb(null, tempDataC, tempDataF, humidData);
-//          })
-//       },
-//       function (cb) {
-//         i2c1.close(cb);
-//       }
-//       ], function (err, results) {
-//         if (err) throw err;
-//           results = results.filter(function(n) { return n!= undefined});
-//           console.log(results);
-//           return results;
-//         });
-//     console.log("--------------");
-//   }, 1000)
-
-//   i2c2.closeSync();
-// }());
-
 module.exports = function () {
   var self = this; 
   self.getData = function(callback) {
-    var dataPacket = {};
     async.series([
       function (cb) {
         b.analogRead('P9_39', function(rawData){
@@ -264,8 +209,8 @@ module.exports = function () {
       }
       ], function (err, results) {
         if (err) throw err;
+          // Filter out the results.
           results = results.filter(function(n) { return n!= undefined});
-          // console.log(results);
           callback({
             "id": 1,
             "temp": results[5][1],
