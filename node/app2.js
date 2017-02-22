@@ -1,22 +1,22 @@
-//var io = require('socket.io')(server);
 var request = require('request');
+var sensors = require('../../bonescript-test/testSunlight.js');
+
+var sensorInstance = new sensors();
 
 var headers = {
 	'User-Agent':       'Super Agent/0.0.1',
-    	'Content-Type':     'application/json'
+	'Content-Type':     'application/json'
 }
 
 var requestData = {
-	id: 1,
-	humidity: 50,
-	temp: 75
+	id: 1
 };
 
 //configure the request
 var options = {
-	//url: 'http://swarm.dyn.wpi.edu:8080/handle',
+	url: 'http://swarm.dyn.wpi.edu:8080/handle',
 
-  url: 'http://localhost:8080/handle',
+	// url: 'http://localhost:8080/handle',
 	method: 'POST',
 	headers: headers,
 	json: true,
@@ -24,18 +24,22 @@ var options = {
 }
 
 //Start the request
-const interval = 5000;
-setInterval(function() {
+var sendData = function() {
 	//generate mock data
-	requestData.humidity = Math.round(Math.random()*100);
-	requestData.temp = Math.round((Math.random()*51) + 40);
-	console.log(requestData.humidity);
-	//send post request
-	request(options, function(error, response, body){
-		if(!error && response.statusCode == 200){
-			console.log(body)
-		}else{
-			console.log(response.statusCode)
-		}
+	sensorInstance.getData(function(data) {
+		options.body = data;
+		request(options, function(error, response, body){
+			if(!error && response.statusCode == 200){
+				console.log(body)
+			}else{
+				console.log(response);
+				// console.log(response.statusCode)
+			}
+		})
 	})
-}, interval);
+
+	//send post request
+	
+};
+
+sendData();
