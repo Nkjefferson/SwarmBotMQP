@@ -1,9 +1,8 @@
 var request = require('request');
-var Sensors = require('lib/sensors.js');
+var Sensors = require('./lib/sensors.js');
 
 var sensorInstance = new Sensors();
 
-var headers = 
 //configure the request
 var options = {
 	url: 'http://swarm.dyn.wpi.edu:8080/handle',

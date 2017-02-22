@@ -1,6 +1,6 @@
 var SerialPort = require('serialport');
 var request = require('request');
-var port = new SerialPort('/dev/ttyUSB0',{
+var port = new SerialPort('/dev/ttyUSB1',{
 	parser: SerialPort.parsers.readline('\n')}
 	);
  
