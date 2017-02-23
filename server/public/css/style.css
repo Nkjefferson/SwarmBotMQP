@@ -125,3 +125,8 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
   stroke: #ccc;
   stroke-width: 1.5px;
 }
+.map{
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}

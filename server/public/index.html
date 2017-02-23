@@ -36,6 +36,7 @@
 						</a>
 						<a href="#" class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon-map-marker"></h4><br/>Maps
+							<select id='data type' class='selectpicker'>
 						</a>
 						<a href="#" class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon-phone"></h4><br/>About
@@ -90,8 +91,22 @@
 					<div class="bhoechie-tab-content">
 						<center>
 							<h1 style="margin-top: 0;color:#55518a">Node Map</h1>
-							<div>
-								<script src= "js/mapscript.js"></script>
+							<div id="map">
+								<script>
+								var uluru = {lat: -25.363, lng: 131.044};
+								var map = new google.maps.Map(dogument.getElementById('map'), {
+								zoom: 4,
+								center: uluru
+								});
+								var marker = new google.maps.marker({
+									position: uluru,
+									map: map
+								});
+								</script>
+								<script async defer
+									src="https://maps.googleapis.com/maps/api/js?key= YOUR_API_KEY&callback=initMap">
+								</script>
+								<!--script src= "js/mapscript.js"></script-->
 							</div>
 						</center>
 					</div>
