@@ -99,7 +99,7 @@
 								//this zoom means that 1 screen cm =	21.2 m * cos(latitude) [adjusting for the difference from the equator]
 								//to change scale look at this http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale
 								//a degree of latitude is 111131.745m, which we can use to convert
-								center: uluru
+								center: uluru	
 								});
 								var marker = new google.maps.marker({
 									position: uluru,
@@ -109,8 +109,9 @@
 								<script async defer
 									src="https://maps.googleapis.com/maps/api/js?key= YOUR_API_KEY&callback=initMap">
 								</script>
-								<div class="overlay">
 								<script src= "js/mapscript.js"></script>
+								<div class="overlay">
+									<img src= "/SwarmBotMQP/server/public/js/blob.png"></div>
 								</div>
 							</div>
 						</center>
