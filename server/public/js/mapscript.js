@@ -15,5 +15,5 @@ for (var i = 0; i < 5; i++) {
 heat.draw();
 
 var fs = require('fs');
-fs.writeFileSync('blob.png', heat.canvas.toBuffer
+fs.writeFileSync('blob.png', heat.canvas.toBuffer);
 
