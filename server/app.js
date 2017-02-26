@@ -109,7 +109,25 @@ app.post('/handle',function(req, res){
 		 	"children":[
 		 	{"name":req.body.temp}
 		 	]
-		 }
+		 },
+ 		 {
+ 		 	"name":"Visible Light",
+ 		 	"children":[
+ 		 	{"name":req.body.visibility}
+ 		 	]
+ 		 },
+ 		 {
+ 		 	"name":"UV Light",
+ 		 	"children":[
+ 		 	{"name":req.body.uv}
+ 		 	]
+ 		 },
+ 		 {
+ 		 	"name":"Air Quality",
+ 		 	"children":[
+ 		 	{"name":req.body.airQuality}
+ 		 	]
+  		 }
 		 ]
 		}
 		]
