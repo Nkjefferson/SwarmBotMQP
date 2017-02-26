@@ -51,7 +51,10 @@ var addData = function(id,data,type){
 	if(day == false){
 		file[id].children[monIndex].children.push({"name":n.toString(),"children":[
 		{"name":"Humidity","children":[]},
-		{"name":"Temperature","children":[]}
+		{"name":"Temperature","children":[]},
+		{"name":"Visible Light","children":[]},
+		{"name":"UV Light","children":[]},
+		{"name":"Air Quality","children":[]}
 		]});
 	}
 	var end;
@@ -140,8 +143,11 @@ app.post('/handle',function(req, res){
 	data["Air Quality"] = req.body.airQuality;
 	dataSet.push(data);
 	dataBank.push(data);
-	addData(data["id"],data["humidity"],0);
-	addData(data["id"],data["temperature"],1);
+	addData(data["id"],data["Humidity"],0);
+	addData(data["id"],data["Temperature"],1);
+	addData(data["id"],data["Visible Light"],2);
+	addData(data["id"],data["UV Light"],3);
+	addData(data["id"],data["Air Quality"],4);
 	
 	res.sendStatus(200);
 });
