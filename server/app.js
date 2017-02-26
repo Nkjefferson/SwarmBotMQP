@@ -135,6 +135,9 @@ app.post('/handle',function(req, res){
 	data["id"] = req.body.id;
 	data["temperature"] = req.body.temp;
 	data["humidity"] = req.body.humidity;
+	data["Visible Light"] = req.body.visibility;
+	data["UV Light"] = req.body.uv;
+	data["Air Quality"] = req.body.airQuality;
 	dataSet.push(data);
 	dataBank.push(data);
 	addData(data["id"],data["humidity"],0);

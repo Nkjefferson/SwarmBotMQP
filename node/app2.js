@@ -3,7 +3,10 @@ var Sensors = require('lib/sensors.js');
 
 var sensorInstance = new Sensors();
 
-var headers = 
+var headers = {
+	'User-Agent':       'Super Agent/0.0.1',
+    	'Content-Type':     'application/json'
+}
 //configure the request
 var options = {
 	url: 'http://swarm.dyn.wpi.edu:8080/handle',
