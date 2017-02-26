@@ -95,7 +95,10 @@
 								<script>
 								var uluru = {lat: -25.363, lng: 131.044};
 								var map = new google.maps.Map(dogument.getElementById('map'), {
-								zoom: 4,
+								zoom: 18,
+								//this zoom means that 1 screen cm =	21.2 m * cos(latitude) [adjusting for the difference from the equator]
+								//to change scale look at this http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale
+								//a degree of latitude is 111131.745m, which we can use to convert
 								center: uluru
 								});
 								var marker = new google.maps.marker({
@@ -106,7 +109,9 @@
 								<script async defer
 									src="https://maps.googleapis.com/maps/api/js?key= YOUR_API_KEY&callback=initMap">
 								</script>
-								<!--script src= "js/mapscript.js"></script-->
+								<div class="overlay">
+								<script src= "js/mapscript.js"></script>
+								</div>
 							</div>
 						</center>
 					</div>
