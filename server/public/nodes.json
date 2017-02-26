@@ -188,6 +188,68 @@
             ]
           }
         ]
+      },
+      {
+        "name": "February",
+        "children": [
+          {
+            "name": "26",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "3:52:46 PM: 81%"
+                  },
+                  {
+                    "name": "3:55:29 PM: 73%"
+                  },
+                  {
+                    "name": "3:57:42 PM: 5%"
+                  },
+                  {
+                    "name": "3:58:20 PM: 37%"
+                  },
+                  {
+                    "name": "4:01:57 PM: 72%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "3:52:46 PM: 54°F"
+                  },
+                  {
+                    "name": "3:55:29 PM: 63°F"
+                  },
+                  {
+                    "name": "3:57:42 PM: 46°F"
+                  },
+                  {
+                    "name": "3:58:20 PM: 42°F"
+                  },
+                  {
+                    "name": "4:01:57 PM: 53°F"
+                  }
+                ]
+              },
+              {
+                "name": "Visible Light",
+                "children": []
+              },
+              {
+                "name": "UV Light",
+                "children": []
+              },
+              {
+                "name": "Air Quality",
+                "children": []
+              }
+            ]
+          }
+        ]
       }
     ]
   },

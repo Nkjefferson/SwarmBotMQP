@@ -62,6 +62,12 @@ var addData = function(id,data,type){
 		end = "%";
 	}else if(type == 1){
 		end = "°F";
+	}else if(type == 2){
+		end = "Lumens";
+	}else if(type == 3){
+		end = "Lumens";
+	}else if(type == 4){
+		end = "Pollutants";
 	}
 	file[id].children[monIndex].children[dayIndex].children[type].children.push({"name":d.toLocaleTimeString()+ ": " + data.toString() + end});
 
@@ -136,8 +142,8 @@ app.post('/handle',function(req, res){
 		]
 	};
 	data["id"] = req.body.id;
-	data["temperature"] = req.body.temp;
-	data["humidity"] = req.body.humidity;
+	data["Temperature"] = req.body.temp;
+	data["Humidity"] = req.body.humidity;
 	data["Visible Light"] = req.body.visibility;
 	data["UV Light"] = req.body.uv;
 	data["Air Quality"] = req.body.airQuality;
