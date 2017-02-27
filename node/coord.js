@@ -57,6 +57,9 @@ var sendData = function(data) {
 	requestData.id = newData.id;
 	requestData.humidity = newData.humidity;
 	requestData.temp = newData.temp;
+	requestData.visibility = newData.visiblity;
+	requestData.uv = newData.uv;
+	requestData.airQuality = newData.airQuality;
 	console.log(requestData);
 	//send post request
 	request(options, function(error, response, body){

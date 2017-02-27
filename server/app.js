@@ -51,7 +51,10 @@ var addData = function(id,data,type){
 	if(day == false){
 		file[id].children[monIndex].children.push({"name":n.toString(),"children":[
 		{"name":"Humidity","children":[]},
-		{"name":"Temperature","children":[]}
+		{"name":"Temperature","children":[]},
+		{"name":"Visible Light","children":[]},
+		{"name":"UV Light","children":[]},
+		{"name":"Air Quality","children":[]}
 		]});
 	}
 	var end;
@@ -59,6 +62,12 @@ var addData = function(id,data,type){
 		end = "%";
 	}else if(type == 1){
 		end = "°F";
+	}else if(type == 2){
+		end = "Lumens";
+	}else if(type == 3){
+		end = "Lumens";
+	}else if(type == 4){
+		end = "Pollutants";
 	}
 	file[id].children[monIndex].children[dayIndex].children[type].children.push({"name":d.toLocaleTimeString()+ ": " + data.toString() + end});
 
@@ -109,18 +118,42 @@ app.post('/handle',function(req, res){
 		 	"children":[
 		 	{"name":req.body.temp}
 		 	]
-		 }
+		 },
+ 		 {
+ 		 	"name":"Visible Light",
+ 		 	"children":[
+ 		 	{"name":req.body.visibility}
+ 		 	]
+ 		 },
+ 		 {
+ 		 	"name":"UV Light",
+ 		 	"children":[
+ 		 	{"name":req.body.uv}
+ 		 	]
+ 		 },
+ 		 {
+ 		 	"name":"Air Quality",
+ 		 	"children":[
+ 		 	{"name":req.body.airQuality}
+ 		 	]
+  		 }
 		 ]
 		}
 		]
 	};
 	data["id"] = req.body.id;
-	data["temperature"] = req.body.temp;
-	data["humidity"] = req.body.humidity;
+	data["Temperature"] = req.body.temp;
+	data["Humidity"] = req.body.humidity;
+	data["Visible Light"] = req.body.visibility;
+	data["UV Light"] = req.body.uv;
+	data["Air Quality"] = req.body.airQuality;
 	dataSet.push(data);
 	dataBank.push(data);
-	addData(data["id"],data["humidity"],0);
-	addData(data["id"],data["temperature"],1);
+	addData(data["id"],data["Humidity"],0);
+	addData(data["id"],data["Temperature"],1);
+	addData(data["id"],data["Visible Light"],2);
+	addData(data["id"],data["UV Light"],3);
+	addData(data["id"],data["Air Quality"],4);
 	
 	res.sendStatus(200);
 });
