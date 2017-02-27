@@ -21,6 +21,10 @@ function start(port){
 
 requestData.humidity = Math.round(Math.random()*100);
 requestData.temp = Math.round((Math.random()*51) + 40);
+requestData.uv = Math.round((Math.random()*51) + 40);
+requestData.visiblity = Math.round((Math.random()*51) + 40);
+requestData.airQuality = Math.round((Math.random()*51) + 40);
+
     port.send(JSON.stringify(requestData));
     port.close();
 }
