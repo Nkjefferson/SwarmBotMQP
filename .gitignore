@@ -49,3 +49,6 @@ jspm_packages
 
 #temp vim swap files
 *.swp
+
+#Stored Data
+./server/public/nodes.json
