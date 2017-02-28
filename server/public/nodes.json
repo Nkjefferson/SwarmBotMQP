@@ -1,2 +1,538 @@
-{}
-
+{
+  "0": {
+    "name": 0,
+    "children": [
+      {
+        "name": "December",
+        "children": [
+          {
+            "name": "12",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "9:09:48 PM: 81%"
+                  },
+                  {
+                    "name": "9:09:53 PM: 72%"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61%"
+                  },
+                  {
+                    "name": "9:10:03 PM: 16%"
+                  },
+                  {
+                    "name": "9:10:08 PM: 74%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "9:09:49 PM: 82°F"
+                  },
+                  {
+                    "name": "9:09:53 PM: 83°F"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61°F"
+                  },
+                  {
+                    "name": "9:10:03 PM: 42°F"
+                  },
+                  {
+                    "name": "9:10:08 PM: 81°F"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "January",
+        "children": [
+          {
+            "name": "2",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "9:09:48 PM: 81%"
+                  },
+                  {
+                    "name": "9:09:53 PM: 72%"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61%"
+                  },
+                  {
+                    "name": "9:10:03 PM: 16%"
+                  },
+                  {
+                    "name": "9:10:08 PM: 74%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "9:09:49 PM: 82°F"
+                  },
+                  {
+                    "name": "9:09:53 PM: 83°F"
+                  },
+                  {
+                    "name": "9:09:58 PM: 61°F"
+                  },
+                  {
+                    "name": "9:10:03 PM: 42°F"
+                  },
+                  {
+                    "name": "9:10:08 PM: 81°F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "5:21:30 PM: 12%"
+                  },
+                  {
+                    "name": "5:21:35 PM: 25%"
+                  },
+                  {
+                    "name": "5:21:40 PM: 22%"
+                  },
+                  {
+                    "name": "5:21:45 PM: 73%"
+                  },
+                  {
+                    "name": "5:21:50 PM: 52%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "5:21:34 PM: 69°F"
+                  },
+                  {
+                    "name": "5:21:35 PM: 81°F"
+                  },
+                  {
+                    "name": "5:21:40 PM: 90°F"
+                  },
+                  {
+                    "name": "5:21:45 PM: 69°F"
+                  },
+                  {
+                    "name": "5:21:50 PM: 74°F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "4",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "12:36:56 PM: 24%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "12:36:56 PM: 43°F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "9",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "5:29:29 PM: 21%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "5:29:29 PM: 79°F"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "February",
+        "children": [
+          {
+            "name": "26",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "3:52:46 PM: 81%"
+                  },
+                  {
+                    "name": "3:55:29 PM: 73%"
+                  },
+                  {
+                    "name": "3:57:42 PM: 5%"
+                  },
+                  {
+                    "name": "3:58:20 PM: 37%"
+                  },
+                  {
+                    "name": "4:01:57 PM: 72%"
+                  },
+                  {
+                    "name": "7:59:48 PM: 10%"
+                  },
+                  {
+                    "name": "11:59:47 PM: 21%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "3:52:46 PM: 54°F"
+                  },
+                  {
+                    "name": "3:55:29 PM: 63°F"
+                  },
+                  {
+                    "name": "3:57:42 PM: 46°F"
+                  },
+                  {
+                    "name": "3:58:20 PM: 42°F"
+                  },
+                  {
+                    "name": "4:01:57 PM: 53°F"
+                  },
+                  {
+                    "name": "7:59:48 PM: 59°F"
+                  },
+                  {
+                    "name": "11:59:47 PM: 82°F"
+                  }
+                ]
+              },
+              {
+                "name": "Visible Light",
+                "children": []
+              },
+              {
+                "name": "UV Light",
+                "children": []
+              },
+              {
+                "name": "Air Quality",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "27",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "3:59:45 AM: 95%"
+                  },
+                  {
+                    "name": "7:59:45 AM: 31%"
+                  },
+                  {
+                    "name": "11:59:44 AM: 49%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "3:59:45 AM: 63°F"
+                  },
+                  {
+                    "name": "7:59:45 AM: 59°F"
+                  },
+                  {
+                    "name": "11:59:44 AM: 54°F"
+                  }
+                ]
+              },
+              {
+                "name": "Visible Light",
+                "children": []
+              },
+              {
+                "name": "UV Light",
+                "children": []
+              },
+              {
+                "name": "Air Quality",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "1": {
+    "name": 1,
+    "children": [
+      {
+        "name": "January",
+        "children": [
+          {
+            "name": "3",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "5:58:30 PM: 54%"
+                  },
+                  {
+                    "name": "5:58:35 PM: 77%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "5:58:30 PM: 69°F"
+                  },
+                  {
+                    "name": "5:58:35 PM: 45°F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "4",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "12:42:00 PM: 71%"
+                  },
+                  {
+                    "name": "12:42:05 PM: 99%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "12:42:00 PM: 56°F"
+                  },
+                  {
+                    "name": "12:42:05 PM: 41°F"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "February",
+        "children": [
+          {
+            "name": "26",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "4:04:16 PM: 25.96932936598764%"
+                  },
+                  {
+                    "name": "7:59:52 PM: 25.685511558709088%"
+                  },
+                  {
+                    "name": "11:59:52 PM: 24.751659418631267%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "4:04:16 PM: 77.3076218814374°F"
+                  },
+                  {
+                    "name": "7:59:52 PM: 77.3076218814374°F"
+                  },
+                  {
+                    "name": "11:59:52 PM: 76.06752117189288°F"
+                  }
+                ]
+              },
+              {
+                "name": "Visible Light",
+                "children": [
+                  {
+                    "name": "4:04:16 PM: 0Lumens"
+                  },
+                  {
+                    "name": "7:59:52 PM: 0Lumens"
+                  },
+                  {
+                    "name": "11:59:52 PM: 0Lumens"
+                  }
+                ]
+              },
+              {
+                "name": "UV Light",
+                "children": [
+                  {
+                    "name": "4:04:16 PM: 0Lumens"
+                  },
+                  {
+                    "name": "7:59:52 PM: 0Lumens"
+                  },
+                  {
+                    "name": "11:59:52 PM: 0Lumens"
+                  }
+                ]
+              },
+              {
+                "name": "Air Quality",
+                "children": [
+                  {
+                    "name": "4:04:16 PM: 0.04111111111111111Pollutants"
+                  },
+                  {
+                    "name": "7:59:52 PM: 0.041666666666666664Pollutants"
+                  },
+                  {
+                    "name": "11:59:52 PM: 0.03777777777777778Pollutants"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "27",
+            "children": [
+              {
+                "name": "Humidity",
+                "children": [
+                  {
+                    "name": "3:59:50 AM: 23.92767223620966%"
+                  },
+                  {
+                    "name": "7:59:50 AM: 23.332570382238497%"
+                  },
+                  {
+                    "name": "11:59:49 AM: 23.698786907759214%"
+                  },
+                  {
+                    "name": "3:41:48 PM: 69%"
+                  }
+                ]
+              },
+              {
+                "name": "Temperature",
+                "children": [
+                  {
+                    "name": "3:59:50 AM: 75.23117418173496°F"
+                  },
+                  {
+                    "name": "7:59:50 AM: 75.05813687342642°F"
+                  },
+                  {
+                    "name": "11:59:49 AM: 76.64911879148546°F"
+                  },
+                  {
+                    "name": "3:41:48 PM: 75°F"
+                  }
+                ]
+              },
+              {
+                "name": "Visible Light",
+                "children": [
+                  {
+                    "name": "3:59:50 AM: 0Lumens"
+                  },
+                  {
+                    "name": "7:59:50 AM: 0Lumens"
+                  },
+                  {
+                    "name": "11:59:49 AM: 0Lumens"
+                  }
+                ]
+              },
+              {
+                "name": "UV Light",
+                "children": [
+                  {
+                    "name": "3:59:50 AM: 0Lumens"
+                  },
+                  {
+                    "name": "7:59:50 AM: 0Lumens"
+                  },
+                  {
+                    "name": "11:59:49 AM: 0Lumens"
+                  }
+                ]
+              },
+              {
+                "name": "Air Quality",
+                "children": [
+                  {
+                    "name": "3:59:50 AM: 0.03611111111111111Pollutants"
+                  },
+                  {
+                    "name": "7:59:50 AM: 0.035555555555555556Pollutants"
+                  },
+                  {
+                    "name": "11:59:49 AM: 0.041666666666666664Pollutants"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
