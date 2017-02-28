@@ -51,4 +51,4 @@ jspm_packages
 *.swp
 
 #Stored Data
-./server/public/nodes.json
+server/public/nodes.json
