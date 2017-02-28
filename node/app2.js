@@ -1,5 +1,5 @@
 var request = require('request');
-var Sensors = require('lib/sensors.js');
+var Sensors = require('./lib/sensors.js');
 
 var sensorInstance = new Sensors();
 
